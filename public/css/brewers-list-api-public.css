@@ -1,0 +1,115 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+body.home #site-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.entry-title {
+    text-align: center;
+}
+
+body.home #site-content article {
+    border: 5px solid #fff;
+    padding: 2em;
+    max-width: 100%;
+    margin: 1.5em 0;
+}
+
+body.single-brewer .entry-content {
+    padding-bottom: 4em;
+}
+
+.brewer-post-wrap article {
+    padding: 1em 2em;
+}
+
+.brewer-post-wrap article:nth-of-type(2n) {
+    background-color: #f0f0f0;
+}
+
+.brewer-post-wrap article h2.entry-title {
+    font-size: 64px;
+    font-size: 4rem;
+}
+
+.entry-content .b-info-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0.5em 0;
+}
+
+.entry-content .b-info-wrap h5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0.5em;
+}
+
+.entry-content .b-info-wrap h5 .dashicons {
+    margin-right: 0.1em;
+}
+
+.entry-content .b-info-wrap .b-meta-content.b-type {
+    display: block;
+    text-transform: capitalize;
+}
+
+.brewer-post-wrap .pagination-wrapper nav {
+    padding: 2em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.brewer-post-wrap .pagination-wrapper nav .page-numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0.2em;
+    text-align: center;
+    min-height: 44px;
+    min-width: 44px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.brewer-post-wrap .pagination-wrapper nav .page-numbers:focus {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Remove powered by text from default theme */
+.powered-by {
+    display: none;
+}
