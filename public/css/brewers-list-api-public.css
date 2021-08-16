@@ -108,8 +108,3 @@ body.single-brewer .entry-content {
 .brewer-post-wrap .pagination-wrapper nav .page-numbers:focus {
     background: rgba(0, 0, 0, 0.9);
 }
-
-/* Remove powered by text from default theme */
-.powered-by {
-    display: none;
-}
