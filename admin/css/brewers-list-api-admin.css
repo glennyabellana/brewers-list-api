@@ -1,0 +1,55 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.brewer-info-box__field {
+    position: relative;
+    margin: 0;
+    padding: 1em 0;
+    border-top: #EEEEEE solid 1px;    
+}
+
+.brewer-info-box__field.first-field {
+    border-top: 0 none;
+}
+
+.brewer-info-box__label {
+    vertical-align: top;
+    margin: 0 0 1em;
+}
+
+.brewer-info-box__label label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 3px;
+    padding: 0;
+}
+
+.brewer-text-fields {
+    width: 100%;
+    padding: 4px 8px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.4;    
+}
+
+.brewer-info-box__input-wrap {
+    position: relative;
+}
+
+.brewer-info-box__input-url .dashicons {
+    position: absolute;
+    left: 0.5em;
+    top: 0.5em;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    opacity: 0.65;
+}
+
+.brewer-info-box__input-url input {
+    padding-left: 2em;
+}
