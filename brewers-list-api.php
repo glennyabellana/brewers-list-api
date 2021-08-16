@@ -5,7 +5,7 @@
  * Description:       Create custom post type "brewers" and display brewers list from https://www.openbrewerydb.org API
  * Version:           1.0.0
  * Author:            Glenny Abellana
- * Author URI:        https://brewers.test
+ * Author URI:        https://glenny.jspreview.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       brewers-list-api
