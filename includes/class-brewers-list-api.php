@@ -201,6 +201,9 @@ class Brewers_List_Api {
 		// Shortcode to display list of breweries
 		add_shortcode( 'breweries', array( $this, 'brewers_shortcode' ) );
 
+		// Load Dashicons on front-end
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'brewer_load_dashicons', 999 );
+
 	}
 
 	/**
