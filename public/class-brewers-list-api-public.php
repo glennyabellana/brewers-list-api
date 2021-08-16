@@ -298,4 +298,13 @@ class Brewers_List_Api_Public {
 		return $brewery_meta_data;
 	}
 
+	/**
+	 * Load dashicons on frontend
+	 *
+	 * @since    1.0.0
+	 */
+	public function brewer_load_dashicons() {
+		wp_enqueue_style( 'dashicons' );
+	}
+	
 }
