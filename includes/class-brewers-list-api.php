@@ -188,7 +188,7 @@ class Brewers_List_Api {
 		// Filter the home_template for brewer custom post type
 		$this->loader->add_filter( 'archive_template', $plugin_public, 'brewer_home_template' );
 
-		// Alter main query on home page to show breweries list
+		// Alter main query on Brewers archive page to show sort posts by title
 		$this->loader->add_action( 'pre_get_posts', $plugin_public, 'pre_get_brewer_custom_posts' );
 
 		// Fire wp cron brewery_sync_api to update data
