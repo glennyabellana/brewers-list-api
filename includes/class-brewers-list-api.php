@@ -216,13 +216,20 @@ class Brewers_List_Api {
 	public function brewers_shortcode( $atts, $content = '' ) {
 		ob_start();
 
-		?>
+		if ( get_query_var( 'paged' ) ) {
+			$paged = get_query_var( 'paged' );
+		} elseif ( get_query_var( 'page' ) ) { // 'page' is used instead of 'paged' on Static Front Page
+			$paged = get_query_var( 'page' );
+		} else {
+			$paged = 1;
+		}
 
-		<?php
-		$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-		$args  = array(
-			'post_type' => 'brewer',
-			'paged'     => $paged,
+		$args = array(
+			'post_type'      => 'brewer',
+			'paged'          => $paged,
+			'posts_per_page' => get_option( 'posts_per_page' ),
+			'order'          => 'ASC', // 'DESC'
+			'orderby'        => 'title',
 		);
 
 		$the_query = new WP_Query( $args );
@@ -241,6 +248,8 @@ class Brewers_List_Api {
 				<?php endwhile; ?>
 				<!-- end of the loop -->
 
+				<?php wp_reset_postdata(); ?>
+
 				<!-- pagination here -->
 				<div class="pagination-wrapper">
 					<nav class="navigation pagination">
@@ -250,8 +259,8 @@ class Brewers_List_Api {
 						echo paginate_links( // phpcs:ignore
 							array(
 								'base'    => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-								'format'  => '?paged=%#%',
-								'current' => max( 1, get_query_var( 'paged' ) ),
+								'format'  => '?page=%#%',
+								'current' => max( 1, get_query_var( 'page' ) ),
 								'total'   => $the_query->max_num_pages,
 							)
 						);
@@ -261,7 +270,6 @@ class Brewers_List_Api {
 
 			</div>
 
-			<?php wp_reset_postdata(); ?>
 
 		<?php endif; ?>
 
