@@ -154,11 +154,12 @@ class Brewers_List_Api_Public {
 
 	/**
 	 * The Code below will modify the main WordPress loop, before the queries fired,
-	 * to only show posts in the halloween category on the home page.
+	 * to only sort Brewers by title on the archive page
 	 */
 	public function pre_get_brewer_custom_posts( $query ) {
-		if ( ( is_home() && is_front_page() ) && $query->is_main_query() ) {
-			$query->set( 'post_type', array( 'brewer' ) );
+		if ( ( is_archive( 'brewers' ) ) && $query->is_main_query() ) {
+			$query->set( 'orderby', 'title' );
+			$query->set( 'order', 'ASC' );
 		}
 		return $query;
 	}
