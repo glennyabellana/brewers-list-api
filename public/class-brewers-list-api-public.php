@@ -214,8 +214,8 @@ class Brewers_List_Api_Public {
 		// Recursive ajax request for brewery_sync_api
 		wp_remote_post(
 			admin_url( 'admin-ajax.php?action=brewery_sync_api' ), [
-				'blocking'  => false,
-				'sslverify' => false, // we are sending this to ourselves, so trust it.
+				'blocking'  => false, // allows you to trigger a non-blocking request
+				'sslverify' => false, // the site is self-signed or is invalid, but reasonably sure that it can be trusted
 				'body'      => [
 					'current_page' => $current_page,
 				],
@@ -280,6 +280,7 @@ class Brewers_List_Api_Public {
 	public function get_existing_brewery_data( $existing_brewery ) {
 		$post_meta = get_post_meta( $existing_brewery->ID );
 
+		// brewer post meta fields
 		$brewery_meta_data = array(
 			'brewer_name'         => $post_meta['brewer_name'][0],
 			'brewery_type'        => $post_meta['brewery_type'][0],
