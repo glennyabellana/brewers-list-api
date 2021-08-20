@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Brewers List API
- * Plugin URI:        https://brewers.test
+ * Plugin URI:        https://glenny.jspreview.com
  * Description:       Create custom post type "brewers" and display brewers list from https://www.openbrewerydb.org API
  * Version:           1.0.0
  * Author:            Glenny Abellana
